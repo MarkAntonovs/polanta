@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a class="polanta">Polanta</a> <a class="invest">Invest</a> </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#properties">Real Estate</a></li>
+                    <li><a href="#photography">Photography</a></li>
+                    <li><a href="#transfer">V-class rent</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>With Us You Can</h2>
+                <h1>Find What You Need</h1>
+                <p>Your journey to the perfect service starts here.</p>
+                <a href="#about" class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+        <section id="about" class="about container">
+            <h2>About Us</h2>
+            <p>We are a leading real estate company dedicated to helping you find the perfect home. gfskhafgjlsdjglhwejthrglwherk;fgjdaj;kehrhgow;eirladkgjfafsjcgbjnav,xcjdfoag;heotrwighroihdskfsfd dfgjkdsjfgl sdlfkgl kdfg df gkewljg oiertg iw4 oweij gidfklg ldfklsg lkwejgkldjsfgljds fwlekjgldsfjgoiwe sdjlkfgjsdlkf ljglkjsdlkfjgl ewlkgjwe g</p>
+            <!-- Add more content about the company -->
+        </section>
+        <section id="properties" class="properties container">
+            <h2>Our Properties</h2>
+            <div class="property-card" onclick="openModal('property1')">
+                <img src="images/Image 2.jpeg" alt="Property 1">
+                <h3>Luxury Villa</h3>
+                <p>4 beds, 3 baths, 2500 sqft</p>
+                <a alt="property1" class="button">View Details</a>
+            </div>
+            <div class="property-card" onclick="openModal('property4')">
+                <img src="images/Image 2.jpeg" alt="Property 1">
+                <h3>Luxury Villa</h3>
+                <p>4 beds, 3 baths, 2500 sqft</p>
+                <a alt="property1" class="button">View Details</a>
+            </div>
+            
+            <!-- Add more property cards as needed -->
+        </section>
+        <div id="propertyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Modern Apartment</h2>
+                <p>Details about the property  hjkaghkajehg ahkjdfdhjkga fh jhk s sdg g  jsdfkghkdsfhkjw jkhdskjhg jhsfkjghsdkf g kjhfgksdhk skhdfkgh sks dhghsd fgjksdhg dh ghjsd gfskjlhdjfgh ksdg kdshgjkd fsdfghkj dsfhg kjsdhg sdg f</p>
+                <p>lkjdhfglsrtnkjhndhl sglwkejglk;wjrklt rgjlrwjlgjrltkjsdfg rtgjklrjtsdklgjrtls glr ktjdglkjwrts</p>            
+            </div>
+        </div>
+        <section id="photography" class="photography">
+            <div class="container">
+                <h2>Photography Service</h2>
+                <p>We offer professional photography services to help you showcase your properties in the best light.</p>
+                <div class="photography-card">
+                    <img src="images/photo.jpeg" alt="Photography Service 1">
+                    <h3>Interior Photography</h3>
+                    <p>Capture the beauty and details of your property's interiors.</p>
+                </div>
+              
+                <!-- Add more photography cards as needed -->
+            </div>
+        </section>
+        <section id="transfer" class="transfer">
+            <div class="container">
+                <h2>Transfer Services</h2>
+                <p>We provide reliable and comfortable transfer services to ensure you reach your destination on time and in style.</p>
+                <div class="transfer-card">
+                    <img src="images/multiwan Medium.jpeg" alt="Airport Transfer">
+                    <h3>Airport Transfer</h3>
+                    <p>Enjoy a hassle-free journey to and from the airport with our professional transfer service.</p>
+                </div>
+                <div class="transfer-card">
+                    <img src="images/download.jpeg" alt="City Transfer">
+                    <h3>City Transfer</h3>
+                    <p>Comfortable and convenient city transfers for all your business and leisure needs.</p>
+                </div>
+                <div class="transfer-card">
+                    <img src="images/images.jpeg" alt="Long Distance Transfer">
+                    <h3>Long Distance Transfer</h3>
+                    <p>Reliable long-distance transfer services to ensure a smooth and safe journey to your destination.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="contact" class="contact container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Real Estate Co. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

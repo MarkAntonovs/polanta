@@ -1,0 +1,502 @@
+/* Global Styles */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000; /* Черный цвет текста */
+    background-color: #ebefe3; /* Фон сайта */
+    scroll-behavior: smooth;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Header Styles */
+header {
+    background-color: #ebefe3; /* Основной цвет шапки */
+    color: #657648; /* Цвет текста в шапке */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.polanta{
+    font-weight: 900;
+
+}
+.invest{
+    font-weight: 100;
+    
+    font-family: "Oswald", sans-serif;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size:30px ;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    color: #657648; /* Цвет ссылок в шапке */
+    padding: 8px 12px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #bbbcaa; /* Цвет при наведении на ссылки в шапке */
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000; /* Цвет текста в hero */
+    padding: 20px;
+    position: relative;
+    background-color: #ebefe3;
+}
+.hero a{
+    transition: background-color 0.3s;
+    
+}
+
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+
+.hero .container {
+    z-index: 1;
+}
+.hero h2 {
+    margin-bottom:0;
+}
+.hero h1 {
+    margin-top: 0;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.scroll-arrow {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 2em;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.scroll-arrow:hover {
+    color: #000000; /* Цвет стрелки при наведении */
+    transform: translateY(5px); /* Плавный эффект при наведении */
+}
+
+.scroll-arrow i {
+    display: block;
+}
+
+/* Properties Section Styles */
+.properties {
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+    width: 100%; /* Убираем ограничение по ширине */
+}
+.properties::before {
+    content: "";
+    display: block;
+    height: 80px; /* Высота, равная высоте заголовка */
+    margin-top: -80px; /* Отрицательный верхний отступ */
+    visibility: hidden;
+}
+
+
+.properties h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    position: relative;
+}
+.property-card {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 80px;
+    overflow: hidden;
+    width: calc(33.333% - 40px);
+    text-align: left;
+    background-color: #ebefe3 ;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #000000;
+}
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.property-card img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.property-card h3 {
+    margin: 15px;
+    font-size: 1.5em;
+}
+
+.property-card p {
+    margin: 0 15px 15px;
+}
+
+.property-card .button {
+    display: block;
+    background-color: #d1d1d1; /* Цвет кнопок в карточках */
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    transition: background-color 0.3s;
+    color:#000000;
+}
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1001; /* Высокий z-index для отображения поверх всего */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #ebefe3;
+    color: #657648;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2; /* Высокий z-index для отображения поверх размытого фона */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Размытие фона */
+.blur-background {
+    filter: blur(5px);
+    pointer-events: none; /* Отключаем взаимодействие с размытой областью */
+}
+
+/* Скрываем размытие на модальном окне */
+.modal-content.blur-background {
+    filter: none;
+    pointer-events: auto;
+}
+/* Photography Section Styles */
+.photography {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.photography h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.photography p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.photography-card {
+    width: 700px;
+    height: auto;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.photography-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.photography-card img {
+    width: 100%;
+    height: auto;
+}
+
+.photography-card h3 {
+    margin: 15px;
+    font-size: 1.5em;
+}
+
+.photography-card p {
+    margin: 0 15px 15px;
+}
+/* Transfer Section Styles */
+.transfer {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #ebefe3; /* Цвет фона секции */
+}
+
+.transfer h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #000000; /* Черный цвет заголовков */
+}
+
+.transfer p {
+    font-size: 1.2em;
+    color: #666; /* Цвет текста */
+    margin-bottom: 40px;
+}
+
+.transfer-card {
+    display: inline-block;
+    background: #ebefe3; /* Белый фон карточек */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 60px;
+    overflow: hidden;
+    width: calc(33.333% - 40px);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.transfer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.transfer-card img {
+    width: 100%;
+    height: auto;
+}
+
+.transfer-card h3 {
+    margin: 15px;
+    font-size: 1.5em;
+    color: #000000; /* Черный цвет заголовков карточек */
+}
+
+.transfer-card p {
+    margin: 0 15px 15px;
+    color: #666; /* Цвет текста карточек */
+}
+
+@media (max-width: 768px) {
+    .transfer-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+/* About Section Styles */
+.about {
+    padding:0 0 100px 0;
+    text-align: center;
+
+}
+.about::before {
+    content: "";
+    display: block;
+    height: 80px; /* Высота, равная высоте заголовка */
+    margin-top: -80px; /* Отрицательный верхний отступ */
+    visibility: hidden;
+}
+
+.about h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.about p {
+    font-size: 1.2em;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact form button {
+    display: inline-block;
+    background-color: #bcc7b5; /* Основной цвет кнопок */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #cfcfcd; /* Цвет кнопок при наведении */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #d1d1d1; /* Основной цвет подвала */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    display: flex;
+}
+
+footer .social-icons a {
+    margin-left: 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #363020; /* Цвет иконок социальных сетей при наведении */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .property-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
