@@ -1,9 +1,9 @@
-function openModal(propertyId) {
-    document.getElementById('propertyModal').style.display = 'block';
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
     document.querySelector('.main-content').classList.add('blur-background');
 }
 
-function closeModal() {
-    document.getElementById('propertyModal').style.display = 'none';
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
     document.querySelector('.main-content').classList.remove('blur-background');
 }

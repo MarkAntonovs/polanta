@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #000000; /* Черный цвет текста */
+    color: #657648; /* Черный цвет текста */
     background-color: #ebefe3; /* Фон сайта */
     scroll-behavior: smooth;
     
@@ -88,7 +88,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #000000; /* Цвет текста в hero */
+    color: #657648; /* Цвет текста в hero */
     padding: 20px;
     position: relative;
     background-color: #ebefe3;
@@ -144,17 +144,9 @@ header nav ul li a:hover {
 
 /* Properties Section Styles */
 .properties {
-    margin-top: 70px;
     text-align: center;
     position: relative;
     width: 100%; /* Убираем ограничение по ширине */
-}
-.properties::before {
-    content: "";
-    display: block;
-    height: 80px; /* Высота, равная высоте заголовка */
-    margin-top: -80px; /* Отрицательный верхний отступ */
-    visibility: hidden;
 }
 
 
@@ -174,7 +166,6 @@ header nav ul li a:hover {
     text-align: left;
     background-color: #ebefe3 ;
     transition: transform 0.3s, box-shadow 0.3s;
-    color: #000000;
 }
 .property-card:hover {
     transform: translateY(-10px);
@@ -182,8 +173,8 @@ header nav ul li a:hover {
 }
 
 .property-card img {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 200px;
 }
 
 
@@ -204,7 +195,6 @@ header nav ul li a:hover {
     text-align: center;
     border-radius: 0 0 15px 15px;
     transition: background-color 0.3s;
-    color:#000000;
 }
 .modal {
     display: none; /* Скрываем модальное окно по умолчанию */
@@ -220,7 +210,6 @@ header nav ul li a:hover {
 
 .modal-content {
     background-color: #ebefe3;
-    color: #657648;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -258,7 +247,7 @@ header nav ul li a:hover {
 }
 /* Photography Section Styles */
 .photography {
-    padding: 100px 0;
+    padding:  0;
     text-align: center;
 }
 
@@ -273,7 +262,7 @@ header nav ul li a:hover {
 }
 
 .photography-card {
-    width: 700px;
+    width: 400px;
     height: auto;
     display: inline-block;
     border-radius: 15px;
@@ -312,12 +301,12 @@ header nav ul li a:hover {
 .transfer h2 {
     margin-bottom: 40px;
     font-size: 2.5em;
-    color: #000000; /* Черный цвет заголовков */
+    color: #657648; /* Черный цвет заголовков */
 }
 
 .transfer p {
     font-size: 1.2em;
-    color: #666; /* Цвет текста */
+    color: #657648; /* Цвет текста */
     margin-bottom: 40px;
 }
 
@@ -346,12 +335,12 @@ header nav ul li a:hover {
 .transfer-card h3 {
     margin: 15px;
     font-size: 1.5em;
-    color: #000000; /* Черный цвет заголовков карточек */
+    color: #657648; /* Черный цвет заголовков карточек */
 }
 
 .transfer-card p {
     margin: 0 15px 15px;
-    color: #666; /* Цвет текста карточек */
+    color: #657648; /* Цвет текста карточек */
 }
 
 @media (max-width: 768px) {
@@ -364,17 +353,12 @@ header nav ul li a:hover {
 
 /* About Section Styles */
 .about {
-    padding:0 0 100px 0;
+    padding:200px 0 100px 0;
     text-align: center;
 
 }
-.about::before {
-    content: "";
-    display: block;
-    height: 80px; /* Высота, равная высоте заголовка */
-    margin-top: -80px; /* Отрицательный верхний отступ */
-    visibility: hidden;
-}
+
+
 
 .about h2 {
     margin-bottom: 40px;
