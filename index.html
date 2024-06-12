@@ -14,7 +14,6 @@
             <nav>
                 <ul>
                     <li><a href="#services">Pakalpojumi</a></li>
-                    <li><a href="#properties">Mūsu īpašumi</a></li>
                     <li><a href="#about">Par mums</a></li>
                     <li><a href="#contact">Kontakti</a></li>
 
@@ -26,76 +25,50 @@
         <section id="services" class="services container">
             <h2>Pakalpojumi</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" onclick="openModal('photographyModal1')">
                     <img src="images/photo img.webp" alt="Interior Photography">
                     <h3>Fotopakalpojumi</h3>
                     <p>Capture the beauty and details of your property's interiors.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openModal('itserviceModal1')">
                     <img src="images/it service img.webp" alt="Exterior Photography">
-                    <h3>Tīmekļa vietņu front-end izstrāde</h3>
-                    <p>Showcase the exterior of your property with stunning photographs.</p>
+                    <h3>Tīmekļa vietņu izstrāde</h3>
+                    <p>Front-end</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="openModal('transferModal1')">
                     <img src="images/multivan img.webp " alt="Car Rental">
                     <h3>Autonoma</h3>
-                    <p>Reliable long-distance transfer services to ensure a smooth and safe journey to your destination.</p>
+                    <p>Volkswagen Multivan, 2019, dīzels, automāts, 7 vietas.</p>
                 </div>
             </div>
         </section>
 
-        <section id="properties" class="properties container">
-            <h2>Mūsu īpašumi</h2>
-            <div class="property-card" onclick="openModal('propertyModal1')">
-                <img src="images/WhatsApp Image 2024-05-22 at 09.29.52 (1).jpeg" alt="property1">
-                <h3>Zeme Carnikavā</h3>
-                <p>1201 m², 55 000 €</p>
-                <a class="button">View Details</a>
-            </div>
-            <div class="property-card" onclick="openModal('propertyModal2')">
-                <img src="images/WhatsApp Image 2023-06-20 at 09.14.27 (3).jpeg" alt="property4">
-                <h3>Zeme Blakus Jūrai</h3>
-                <p>1660 m², 38 500 €</p>
-                <a class="button">View Details</a>
-            </div>
-        </section>
-
-        <div id="propertyModal1" class="modal">
+        <div id="photographyModal1" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal('propertyModal1')">&times;</span>
-                <h2>Zeme Carnikavā</h2>
-                <p>Adrese: Rudzu iela 32, Carnikava, Carnikavas pag., Ādažu nov., LV-2163</p>
-                <p>Cena: 55 000 € (45,79 €/m²)</p>
-                <p>Platība: 1201 m²</p>
-                <p>Kadastra numurs: 8052 005 1713</p>
-                <p>Saite: <a href="https://carnikava.eu/">https://carnikava.eu/</a></p>
-                <p>Zemes īpašums Carnikavas centrālajā daļā, Rudzu ielā 32, kas ir kā daļa no jaunā privātmāju apbūves ciemata Līvu Raksti.</p>
-                <p>✔️ Elektroapgāde;</p>
-                <p>✔️ Centralizēta ūdensapgāde un kanalizācija;</p>
-                <p>✔️ Dabasgāze;</p>
-                <p>✔️ Optiskā interneta tīkls;</p>
-                <p>✔️ Divjoslu, asfaltētas un apgaismotas ielas;</p>
+                <span class="close" onclick="closeModal('photographyModal1')">&times;</span>
+                <h2>Fotopakalpojumi
+                </h2>
+                <p>Mēs piedāvājam iemūžināt Jūsu pasākumus vai svarīgākos dzīves mirkļus. Iespējama arī fotografēšana studijā. Droši zvaniet, lai vienotos par dienu un laiku iepriekš.</p>
             </div>
         </div>
 
-        <div id="propertyModal2" class="modal">
+        <div id="itserviceModal1" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal('propertyModal2')">&times;</span>
-                <h2>Zeme Blakus Jūrai</h2>
-                <p>Adrese: Vējrozes iela 17, Ziemeļblāzma, Skultes pagasts, Limbažu novads, LV-4025</p>
-                <p>Cena: 38 500 €</p>
-                <p>Platība: 1660 m²</p>
-                <p>Kadastra numurs: 6676 013 0452</p>
-                <p>Pēdējais zemes gabals ciematā "Blakus Jūrai".</p>
-                <p>✔️ ieeja;</p>
-                <p>✔️ elektrība;</p>
-                <p>✔️ apdzīvota vieta, tuvumā top jaunas mājas;</p>
-                <p>✔️ Līdz jūrai 900 metri.</p>
+                <span class="close" onclick="closeModal('itserviceModal1')">&times;</span>
+                <h2>Tīmekļa vietņu izstrāde</h2>
+                <p>Mēs piedāvājam augstas kvalitātes tīmekļa vietņu front-end izstrādi uzņēmumiem un personīgajiem zīmoliem. Mēs radīsim modernas un funkcionālas tīmekļa vietnes, kas efektīvi atbilst jūsu vajadzībām. Sazinieties ar mums, lai vienotos par projekta detaļām un uzlabotu savu tiešsaistes klātbūtni.</p>
             </div>
         </div>
-        <section id="about" class="about container">
+        <div id="transferModal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('transferModal1')">&times;</span>
+                <h2>Autonoma</h2>
+                <p>Mēs piedāvājam mikroautobusa Volkswagen Multivan jebkura veida nomu: auto noma ar vai bez šofera, ilgtermiņā vai īstermiņa. Mēs piedāvāsim labāko risinājumu, pieskaņotu tiešī Jūsu vajadzībām. Tas var būt gan transfers no ligostas vai viesnīcas, vai jūsu darbinieku atvešana vai aizvešana no vai uz objektu. Mikroautobusu ir iespējams nomāt arī ārzemju ceļojumiem Eiropas Savienības valstu robežās.</p>
+            </div>
+        </div>
+        <section id="about" class="about container" >
             <h2>Par mums</h2>
-            <p>Laipni lūgti mūsu nekustamā īpašuma aģentūrā! Mēs cenšamies sniegt jums pakalpojumus ar personalizētu pieeju, pērkot vai pārdodot nekustamo īpašumu. Mūsu aģentūra specializējas tādu īpašumu meklēšanā un nodrošināšanā, kas atbilst jūsu unikālajām vajadzībām un vēlmēm. Neatkarīgi no tā, vai meklējat mājīgu ģimenes dzīvesvietu vai komercplatības savam biznesam, mēs palīdzēsim jums sasniegt jūsu mērķus.
+            <p>Laipni lūgti mūsu ģimenes uzņēmumā! Mēs sniedzam foto, auto nomas un interneta mājaslapu izveides pakalpojumus. Neatkarīgi no izvēlētā pakalpojuma mēs palīdzēsim sasniegt jūsu mērķus. Izvēlieties nepieciešamo pakalpojumu sadaļu, lai iepazītos ar to detalizētāk.
             </p>
         </section>
         <section id="contact" class="contact container">

@@ -279,9 +279,18 @@ header nav ul li a:hover {
 }
 
 /* About Section Styles */
+
 .about {
-    padding: 100px 0;
+    
+    margin-bottom: 100px;
     text-align: center;
+}
+.about:before {
+    content: "";
+    display: block;
+    height: 80px; /* Высота, равная высоте заголовка */
+    margin-top: -80px; /* Отрицательный верхний отступ */
+    visibility: hidden;
 }
 
 .about h2 {
@@ -296,6 +305,7 @@ header nav ul li a:hover {
 
 /* Contact Section Styles */
 .contact {
+
     margin-bottom: 100px;
     text-align: center;
 }
