@@ -8,80 +8,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo"><a class="polanta">Polanta</a> <a class="invest">Invest SIA</a> </div>
+    <header >
+        <div  class="container">
+            <div class="logo"><a href="#services" class="polanta">Polanta</a> <a href="#services" class="invest">Invest SIA</a> </div>
             <nav>
                 <ul>
-                    <li><a href="#about">Par mums</a></li>
-                    <li><a href="#photography">Fotopakalpojumi</a></li>
-                    <li><a href="#transfer">Autonoma</a></li>
+                    <li><a href="#services">Pakalpojumi</a></li>
                     <li><a href="#properties">Mūsu īpašumi</a></li>
-
-                    
+                    <li><a href="#about">Par mums</a></li>
                     <li><a href="#contact">Kontakti</a></li>
+
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        
-        
-        <section id="about" class="about container">
-            <h2>Par mums</h2>
-            <p>Laipni lūgti mūsu nekustamā īpašuma aģentūrā! Mēs cenšamies sniegt jums pakalpojumus ar personalizētu pieeju, pērkot vai pārdodot nekustamo īpašumu. Mūsu aģentūra specializējas tādu īpašumu meklēšanā un nodrošināšanā, kas atbilst jūsu unikālajām vajadzībām un vēlmēm. Neatkarīgi no tā, vai meklējat mājīgu ģimenes dzīvesvietu vai komercplatības savam biznesam, mēs palīdzēsim jums sasniegt jūsu mērķus.
-
-            </p>
-            <!-- Add more content about the company -->
-        </section>
-        <section id="photography" class="photography">
-            <div class="container">
-                <h2>Fotopakalpojumi</h2>
-                <p>We offer professional photography services to help you showcase your properties in the best light.</p>
-                <div class="photography-card">
-                    <img src="images/photo.jpeg" alt="Photography Service 1">
-                    <h3>Interior Photography</h3>
+        <section id="services" class="services container">
+            <h2>Pakalpojumi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/photo img.webp" alt="Interior Photography">
+                    <h3>Fotopakalpojumi</h3>
                     <p>Capture the beauty and details of your property's interiors.</p>
                 </div>
-              
-                <!-- Add more photography cards as needed -->
-            </div>
-        </section>
-        <section id="transfer" class="transfer">
-            <div class="container">
-                <h2>Autonoma</h2>
-                <p>We provide reliable and comfortable transfer services to ensure you reach your destination on time and in style.</p>
-                
-                <div class="transfer-card">
-                    <img src="images/2024-06-11 18.05.50.jpg" alt="Long Distance Transfer">
+                <div class="service-card">
+                    <img src="images/it service img.webp" alt="Exterior Photography">
+                    <h3>Tīmekļa vietņu front-end izstrāde</h3>
+                    <p>Showcase the exterior of your property with stunning photographs.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/multivan img.webp " alt="Car Rental">
                     <h3>Autonoma</h3>
                     <p>Reliable long-distance transfer services to ensure a smooth and safe journey to your destination.</p>
                 </div>
             </div>
         </section>
-        
+
         <section id="properties" class="properties container">
             <h2>Mūsu īpašumi</h2>
             <div class="property-card" onclick="openModal('propertyModal1')">
                 <img src="images/WhatsApp Image 2024-05-22 at 09.29.52 (1).jpeg" alt="property1">
                 <h3>Zeme Carnikavā</h3>
-                <p>
-                    1201 m², 55 000 €
-                </p>
-                <a alt="property1" class="button">View Details</a>
+                <p>1201 m², 55 000 €</p>
+                <a class="button">View Details</a>
             </div>
             <div class="property-card" onclick="openModal('propertyModal2')">
                 <img src="images/WhatsApp Image 2023-06-20 at 09.14.27 (3).jpeg" alt="property4">
                 <h3>Zeme Blakus Jūrai</h3>
-                <p>
-                    1660 m², 38 500 €
-                </p>
-                <a alt="property4" class="button">View Details</a>
+                <p>1660 m², 38 500 €</p>
+                <a class="button">View Details</a>
             </div>
-            
-            <!-- Add more property cards as needed -->
         </section>
-        
+
         <div id="propertyModal1" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('propertyModal1')">&times;</span>
@@ -99,7 +77,7 @@
                 <p>✔️ Divjoslu, asfaltētas un apgaismotas ielas;</p>
             </div>
         </div>
-        
+
         <div id="propertyModal2" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('propertyModal2')">&times;</span>
@@ -115,20 +93,18 @@
                 <p>✔️ Līdz jūrai 900 metri.</p>
             </div>
         </div>
-        
-      
-        
-        
-       
-        
+        <section id="about" class="about container">
+            <h2>Par mums</h2>
+            <p>Laipni lūgti mūsu nekustamā īpašuma aģentūrā! Mēs cenšamies sniegt jums pakalpojumus ar personalizētu pieeju, pērkot vai pārdodot nekustamo īpašumu. Mūsu aģentūra specializējas tādu īpašumu meklēšanā un nodrošināšanā, kas atbilst jūsu unikālajām vajadzībām un vēlmēm. Neatkarīgi no tā, vai meklējat mājīgu ģimenes dzīvesvietu vai komercplatības savam biznesam, mēs palīdzēsim jums sasniegt jūsu mērķus.
+            </p>
+        </section>
         <section id="contact" class="contact container">
-            <h2>Contact Us</h2>
+            <h2>Kontakti</h2>
             <div class="container">
-               
                 <p class="infospace_phone"><h3>Telefons:</h3> +371 29 211 489</p>
                 <p class="infospace"><h3>E-pasts:</h3> polanta@gmail.com</p>
                 <p class="infospace_adress"><h3>Adrese:</h3> Pulkveža Brieža iela 27, Rīga, LV-1045</p>
-              </div> 
+            </div>
         </section>
     </main>
     <footer>

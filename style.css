@@ -1,15 +1,14 @@
 /* Global Styles */
-html{
+html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #657648; /* Черный цвет текста */
-    background-color: #ebefe3; /* Фон сайта */
-    scroll-behavior: smooth;
-    
+    color: #657648;
+    background-color: #ebefe3;
 }
 
 a {
@@ -28,11 +27,10 @@ ul {
     margin: 0 auto;
 }
 
-
 /* Header Styles */
 header {
-    background-color: #ebefe3; /* Основной цвет шапки */
-    color: #657648; /* Цвет текста в шапке */
+    background-color: #ebefe3;
+    color: #657648;
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -41,13 +39,12 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-.polanta{
+header .polanta {
     font-weight: 900;
-
 }
-.invest{
+
+header .invest {
     font-weight: 100;
-    
     font-family: "Oswald", sans-serif;
 }
 
@@ -58,11 +55,12 @@ header .container {
 }
 
 header .logo {
-    font-size:30px ;
+    font-size: 30px;
 }
 
 header nav ul {
     display: flex;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -70,7 +68,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #657648; /* Цвет ссылок в шапке */
+    color: #657648;
     padding: 8px 12px;
     font-size: 1.1em;
     border-radius: 5px;
@@ -78,43 +76,25 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #bbbcaa; /* Цвет при наведении на ссылки в шапке */
+    background-color: #bbbcaa;
 }
 
 /* Hero Section Styles */
 .hero {
-    height: 800px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #657648; /* Цвет текста в hero */
+    color: #657648;
     padding: 20px;
-    position: relative;
     background-color: #ebefe3;
 }
-.hero a{
-    transition: background-color 0.3s;
-    
-}
 
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    
-}
-
-.hero .container {
-    z-index: 1;
-}
 .hero h2 {
-    margin-bottom:0;
+    margin-bottom: 0;
 }
+
 .hero h1 {
     margin-top: 0;
     font-size: 3.5em;
@@ -125,6 +105,7 @@ header nav ul li a:hover {
     font-size: 1.3em;
     margin-bottom: 20px;
 }
+
 .scroll-arrow {
     display: inline-block;
     margin-top: 20px;
@@ -134,50 +115,100 @@ header nav ul li a:hover {
 }
 
 .scroll-arrow:hover {
-    color: #000000; /* Цвет стрелки при наведении */
-    transform: translateY(5px); /* Плавный эффект при наведении */
+    color: #000000;
+    transform: translateY(5px);
 }
 
 .scroll-arrow i {
     display: block;
 }
 
+/* Services Section Styles */
+.services {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #ebefe3;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #657648;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-card {
+    background: #ebefe3;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    overflow: hidden;
+    width: calc(33.333% - 40px);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+}
+
+.service-card h3 {
+    margin: 15px;
+    font-size: 1.5em;
+    color: #657648;
+}
+
+.service-card p {
+    margin: 0 15px 15px;
+    color: #657648;
+}
+
 /* Properties Section Styles */
 .properties {
     text-align: center;
     position: relative;
-    width: 100%; /* Убираем ограничение по ширине */
+    width: 100%;
 }
-
 
 .properties h2 {
     margin-bottom: 40px;
     font-size: 2.5em;
     position: relative;
 }
+
 .property-card {
     position: relative;
     display: inline-block;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    margin: 80px;
+    margin: 20px;
     overflow: hidden;
     width: calc(33.333% - 40px);
     text-align: left;
-    background-color: #ebefe3 ;
+    background-color: #ebefe3;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .property-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .property-card img {
-    width: 400px;
+    width: 100%;
     height: 200px;
 }
-
-
 
 .property-card h3 {
     margin: 15px;
@@ -190,22 +221,24 @@ header nav ul li a:hover {
 
 .property-card .button {
     display: block;
-    background-color: #d1d1d1; /* Цвет кнопок в карточках */
+    background-color: #d1d1d1;
     padding: 10px;
     text-align: center;
     border-radius: 0 0 15px 15px;
     transition: background-color 0.3s;
 }
+
+/* Модальное окно */
 .modal {
-    display: none; /* Скрываем модальное окно по умолчанию */
+    display: none;
     position: fixed;
-    z-index: 1001; /* Высокий z-index для отображения поверх всего */
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5); /* Полупрозрачный черный фон */
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
@@ -217,7 +250,7 @@ header nav ul li a:hover {
     max-width: 600px;
     border-radius: 10px;
     position: relative;
-    z-index: 2; /* Высокий z-index для отображения поверх размытого фона */
+    z-index: 2;
 }
 
 .close {
@@ -237,128 +270,19 @@ header nav ul li a:hover {
 /* Размытие фона */
 .blur-background {
     filter: blur(5px);
-    pointer-events: none; /* Отключаем взаимодействие с размытой областью */
+    pointer-events: none;
 }
 
-/* Скрываем размытие на модальном окне */
 .modal-content.blur-background {
     filter: none;
     pointer-events: auto;
 }
-/* Photography Section Styles */
-.photography {
-    padding:  0;
-    text-align: center;
-}
-
-.photography h2 {
-    margin-bottom: 40px;
-    font-size: 2.5em;
-}
-
-.photography p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-.photography-card {
-    width: 400px;
-    height: auto;
-    display: inline-block;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 20px;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.photography-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-.photography-card img {
-    width: 100%;
-    height: auto;
-}
-
-.photography-card h3 {
-    margin: 15px;
-    font-size: 1.5em;
-}
-
-.photography-card p {
-    margin: 0 15px 15px;
-}
-/* Transfer Section Styles */
-.transfer {
-    padding: 100px 0;
-    text-align: center;
-    background-color: #ebefe3; /* Цвет фона секции */
-}
-
-.transfer h2 {
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    color: #657648; /* Черный цвет заголовков */
-}
-
-.transfer p {
-    font-size: 1.2em;
-    color: #657648; /* Цвет текста */
-    margin-bottom: 40px;
-}
-
-.transfer-card {
-    display: inline-block;
-    background: #ebefe3; /* Белый фон карточек */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 60px;
-    overflow: hidden;
-    width: calc(33.333% - 40px);
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.transfer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.transfer-card img {
-    width: 100%;
-    height: auto;
-}
-
-.transfer-card h3 {
-    margin: 15px;
-    font-size: 1.5em;
-    color: #657648; /* Черный цвет заголовков карточек */
-}
-
-.transfer-card p {
-    margin: 0 15px 15px;
-    color: #657648; /* Цвет текста карточек */
-}
-
-@media (max-width: 768px) {
-    .transfer-card {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
 
 /* About Section Styles */
 .about {
-    padding:200px 0 100px 0;
+    padding: 100px 0;
     text-align: center;
-
 }
-
-
 
 .about h2 {
     margin-bottom: 40px;
@@ -367,11 +291,12 @@ header nav ul li a:hover {
 
 .about p {
     font-size: 1.2em;
+    margin: 0 20px;
 }
 
 /* Contact Section Styles */
 .contact {
-    padding: 100px 0;
+    margin-bottom: 100px;
     text-align: center;
 }
 
@@ -380,46 +305,27 @@ header nav ul li a:hover {
     font-size: 2.5em;
 }
 
-.contact form {
+.contact .container {
     max-width: 600px;
     margin: 0 auto;
 }
 
-.contact form label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact form input,
-.contact form textarea {
-    width: 100%;
-    padding: 10px;
+.contact .infospace_phone,
+.contact .infospace,
+.contact .infospace_adress {
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
 }
 
-.contact form button {
-    display: inline-block;
-    background-color: #bcc7b5; /* Основной цвет кнопок */
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.contact form button:hover {
-    background-color: #cfcfcd; /* Цвет кнопок при наведении */
+.contact .infospace_phone h3,
+.contact .infospace h3,
+.contact .infospace_adress h3 {
+    display: inline;
+    font-weight: bold;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #d1d1d1; /* Основной цвет подвала */
+    background-color: #d1d1d1;
     text-align: center;
     padding: 20px 0;
 }
@@ -446,10 +352,16 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-    color: #363020; /* Цвет иконок социальных сетей при наведении */
+    color: #363020;
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    .property-card, .service-card {
+        width: calc(50% - 40px);
+    }
+}
+
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -474,7 +386,7 @@ footer .social-icons a:hover {
         font-size: 2.5em;
     }
 
-    .property-card {
+    .property-card, .service-card {
         width: 100%;
         margin: 10px 0;
     }
@@ -482,5 +394,32 @@ footer .social-icons a:hover {
     footer .container {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    header nav ul li a {
+        font-size: 1em;
+    }
+
+    .modal-content {
+        margin: 30% auto;
+    }
+
+    .property-card, .service-card {
+        width: 100%;
+        margin: 10px 0;
     }
 }
