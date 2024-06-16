@@ -1,14 +1,12 @@
 /* Global Styles */
 html {
     scroll-behavior: smooth;
-}* {
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
 
 body {
     margin: 0;
@@ -63,11 +61,20 @@ header .container {
 
 header .logo {
     font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 header nav ul {
     display: flex;
     flex-wrap: wrap;
+    margin-left: auto;
 }
 
 header nav ul li {
@@ -84,50 +91,6 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background-color: #bbbcaa;
-}
-
-/* Hero Section Styles */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #657648;
-    padding: 20px;
-    background-color: #ebefe3;
-}
-
-.hero h2 {
-    margin-bottom: 0;
-}
-
-.hero h1 {
-    margin-top: 0;
-    font-size: 3.5em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.3em;
-    margin-bottom: 20px;
-}
-
-.scroll-arrow {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 2em;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.scroll-arrow:hover {
-    color: #000000;
-    transform: translateY(5px);
-}
-
-.scroll-arrow i {
-    display: block;
 }
 
 /* Services Section Styles */
@@ -181,11 +144,6 @@ header nav ul li a:hover {
     color: #657648;
 }
 
-.modal1-picture{
-    width: 400px;
-    height: auto;
-}
-
 
 /* Модальное окно */
 .modal {
@@ -199,20 +157,23 @@ header nav ul li a:hover {
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
 }
-.modal-content-container{
+
+.modal-content-container {
     display: flex;
+    flex-direction: column;
     padding: 20px 0 20px 0;
-   
-}
-.modal-content-container img{
-    
-    margin-right: 20px; /* Отступ между изображением и текстом */
-    border-radius: 8px;
-}
-.modal-content-container-p{
-    text-align: left;
 }
 
+.modal-content-container img {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.modal-content-container-p {
+    text-align: left;
+}
 
 .modal-content {
     background-color: #ebefe3;
@@ -251,17 +212,16 @@ header nav ul li a:hover {
 }
 
 /* About Section Styles */
-
 .about {
-    
     margin-bottom: 100px;
     text-align: center;
 }
+
 .about:before {
     content: "";
     display: block;
-    height: 80px; /* Высота, равная высоте заголовка */
-    margin-top: -80px; /* Отрицательный верхний отступ */
+    height: 80px;
+    margin-top: -80px;
     visibility: hidden;
 }
 
@@ -277,7 +237,6 @@ header nav ul li a:hover {
 
 /* Contact Section Styles */
 .contact {
-
     margin-bottom: 100px;
     text-align: center;
 }
@@ -307,7 +266,7 @@ header nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #d1d1d1;
+    background-color: #bbbcaa;
     text-align: center;
     padding: 20px 0;
 }
@@ -317,6 +276,7 @@ footer .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    color: #ebefe3;
 }
 
 footer p {
@@ -346,8 +306,18 @@ footer .social-icons a:hover {
 
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .menu-icon {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
     }
 
     header nav ul {
@@ -355,9 +325,22 @@ footer .social-icons a:hover {
         width: 100%;
     }
 
+    header nav ul.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #ebefe3;
+        padding: 10px 0;
+        width: 100%;
+    }
+
     header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 15px 0;
+        text-align: center;
     }
 
     .hero {
@@ -379,29 +362,3 @@ footer .social-icons a:hover {
     }
 }
 
-@media (max-width: 480px) {
-    header .logo {
-        font-size: 24px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    header nav ul li a {
-        font-size: 1em;
-    }
-
-    .modal-content {
-        margin: 30% auto;
-    }
-
-    .property-card, .service-card {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
