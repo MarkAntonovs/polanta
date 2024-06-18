@@ -203,10 +203,7 @@ header nav ul li a:hover {
 }
 
 /* Размытие фона */
-.blur-background {
-    filter: blur(5px);
-    pointer-events: none;
-}
+
 
 .modal-content.blur-background {
     filter: none;
