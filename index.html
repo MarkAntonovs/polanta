@@ -29,25 +29,27 @@
         <section id="services" class="services container">
             <h2>Pakalpojumi</h2>
             <div class="services-grid">
-                <div class="service-card" onclick="openModal('photographyModal1')">
-                    <img src="images/photo img.jpg" alt="Interior Photography">
-                    <h3>Fotopakalpojumi</h3>
-                    <p>Studija, Pasakumi, Bērnu fotografēšana, Dzimšanas dienas.</p>
+                <div class="service-card" onclick="openModal('transferModal1')">
+                    <img src="images/2024-06-11 18.05.50.jpg " alt="Car Rental">
+                    <h3>Autonoma</h3>
+                    <p>Volkswagen Multivan, 2019, dīzelis, automāts, 7 vietas.</p>
                 </div>
+
                 <div class="service-card" onclick="openModal('itserviceModal1')">
                     <img src="images/Screenshot 2024-06-14 at 17.55.19.png" alt="Exterior Photography">
                     <h3>Tīmekļa vietņu izstrāde</h3>
                     <p>Adaptīvs un moderns dizains, Lietotājam pielāgots interfeiss, Interaktīvie elementi. </p>
                 </div>
-                <div class="service-card" onclick="openModal('transferModal1')">
-                    <img src="images/2024-06-11 18.05.50.jpg " alt="Car Rental">
-                    <h3>Autonoma</h3>
-                    <p>Volkswagen Multivan, 2019, dīzels, automāts, 7 vietas.</p>
+
+                <div class="service-card" onclick="openModal('photographyModal1')">
+                    <img src="images/photo img.jpg" alt="Interior Photography">
+                    <h3>Fotopakalpojumi</h3>
+                    <p>Studija, Pasakumi, Bērnu fotografēšana, Dzimšanas dienas.</p>
                 </div>
             </div>
         </section>
 
-        <div id="photographyModal1" class="modal">
+        <div id="photographyModal1" class="modal" onclick="closeModalOnClick(event, 'photographyModal1')">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('photographyModal1')">&times;</span>
                 <h2>Fotopakalpojumi
@@ -62,7 +64,7 @@
         </div>
            
 
-        <div id="itserviceModal1" class="modal">
+        <div id="itserviceModal1" class="modal" onclick="closeModalOnClick(event, 'itserviceModal1')">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('itserviceModal1')">&times;</span>
                 <h2>Tīmekļa vietņu izstrāde</h2>
@@ -74,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div id="transferModal1" class="modal">
+        <div id="transferModal1" class="modal" onclick="closeModalOnClick(event, 'transferModal1')">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('transferModal1')">&times;</span>
                 <h2>Autonoma</h2>
